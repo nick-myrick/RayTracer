@@ -6,6 +6,10 @@
 
 using std::sqrt;
 
+//-------------------------
+// vec3 Main Class
+//-------------------------
+
 class vec3 {
     public:
 
