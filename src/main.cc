@@ -4,6 +4,10 @@
 
 #include <iostream> 
 
+//------------------------------------------------------------------------------------
+// Return -1 if the ray does not cross sphere, return quadratic if it did cross sphere
+//------------------------------------------------------------------------------------
+
 double hit_sphere(const point3& center, float radius, const ray& r) {
     vec3 oc = r.origin() - center;
     auto a = r.direction().length_squared();
@@ -18,6 +22,11 @@ double hit_sphere(const point3& center, float radius, const ray& r) {
     }  
 }
 
+//------------------------------------------------------------------------------------
+// There are two color gradients to manage, the background and the sphere's. Depending
+// on the return of hit_sphere, calculate the pixel color for the specific coordinate. 
+//------------------------------------------------------------------------------------
+
 color ray_color(const ray& r) {
     auto t = hit_sphere(point3(0, 0, -1), 0.5, r);
     if (t > 0.0) {
@@ -29,6 +38,10 @@ color ray_color(const ray& r) {
     t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(1.0, 0.0, 0.0); // background stays the same
 }
+
+//------------------------------------------
+// Define the viewport and generate a circle
+//------------------------------------------
 
 int main() {
 
