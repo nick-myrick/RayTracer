@@ -1,3 +1,7 @@
+#---------------------------------------------------------------------------------------
+# Makefile in charge of compiling and linking RayTracer components to a excecutable file 
+#---------------------------------------------------------------------------------------
+
 CPP = g++
 NAME = main
 TYPE = .exe

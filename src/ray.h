@@ -3,6 +3,10 @@
 
 #include "vec3.h"
 
+//---------------------------------------
+// Ray implementing P(t) = A + t*b method
+//---------------------------------------
+
 class ray {
     public:
         ray() {}
