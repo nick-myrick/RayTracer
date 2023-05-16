@@ -47,7 +47,7 @@ int main() {
 
     // Image
     const auto aspect_ratio = 16.0 / 9.0;
-    const int image_width = 2160;
+    const int image_width = 400;
     const int image_height = static_cast<int>(image_width / aspect_ratio);
 
     // Camera
